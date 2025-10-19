@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "TOF-Website",
+			"path": "."
+		},
+		{
+			"name": "Logos",
+			"path": "../../../Downloads/TOF/Graphics/Logos"
+		},
+		{
+			"path": "../../../Downloads/TOF/Graphics/Cohort Graphics"
+		},
+		{
+			"path": "../../../Downloads/TOF/Graphics/Social Media Graphics"
+		}
+	],
+	"settings": {}
+}
