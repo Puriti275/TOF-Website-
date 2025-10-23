@@ -15,5 +15,7 @@
 			"path": "../../../Downloads/TOF/Graphics/Social Media Graphics"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.autoSave": "afterDelay"
+	}
 }
