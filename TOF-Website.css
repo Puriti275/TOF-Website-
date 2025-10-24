@@ -193,6 +193,19 @@ footer {
     padding-top: 20px;
 }
 
+.donate-button-container {
+    margin: auto;
+    width: 95%;
+}
+
+.donate-button {
+    width: 100%;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 6px;
+    background-color:#2188FF
+}
+
 .about-text {
     height: 100%;
     align-items: center;
