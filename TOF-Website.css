@@ -203,7 +203,13 @@ footer {
     text-align: center;
     border: 2px solid gray;
     border-radius: 6px;
-    background-color:#2188FF
+    background-color:#2188FF;
+}
+
+.donate-button-text {
+    font-family: georgia;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .about-text {
