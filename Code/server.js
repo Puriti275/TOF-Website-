@@ -2,18 +2,23 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs');
+app.use(logger)
 
 app.get('/', (req, res) => {
     console.log("here");
     res.render('index');
 });
 
-app.get('/users', (req, res) => {
-    res.send("User List")
-})
+const userRouter = require('./routes/users')
 
-app.get('/users/new', (req, res) => {
-    res.send("User New Form")
-})
+//anything starting with router will start with a path of /users
+app.use('/users', userRouter)
+
+function logger(req, res, next) {
+    console.log(req.originalUrl)
+    next()
+}
+//you can put middleware into certain gets, sets and more
+//to only run it on that individual route
 
 app.listen(3000);
