@@ -16,6 +16,12 @@
 		}
 	],
 	"settings": {
-		"files.autoSave": "afterDelay"
+		"files.autoSave": "afterDelay",
+		"files.associations": {
+			"*.dbclient-js": "javascript",
+			"*.ejs": "html",
+			"string": "cpp",
+			"vector": "cpp"
+		}
 	}
 }
