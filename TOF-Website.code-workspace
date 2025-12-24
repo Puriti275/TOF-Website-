@@ -5,14 +5,20 @@
 			"path": "."
 		},
 		{
+			"name": "Social Media Graphics",
+			"path": "../../../Downloads/TOF/Graphics/Social Media Graphics"
+		},
+		{
+			"name": "Cohort Graphics",
+			"path": "../../../Downloads/TOF/Graphics/Cohort Graphics"
+		},
+		{
 			"name": "Logos",
 			"path": "../../../Downloads/TOF/Graphics/Logos"
 		},
 		{
-			"path": "../../../Downloads/TOF/Graphics/Cohort Graphics"
-		},
-		{
-			"path": "../../../Downloads/TOF/Graphics/Social Media Graphics"
+			"name": "Merch",
+			"path": "../../../Downloads/TOF/Merch"
 		}
 	],
 	"settings": {
@@ -21,7 +27,11 @@
 			"*.dbclient-js": "javascript",
 			"*.ejs": "html",
 			"string": "cpp",
-			"vector": "cpp"
-		}
+			"vector": "cpp",
+			"iostream": "cpp",
+			"istream": "cpp",
+			"ostream": "cpp"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "TOF-Website"
 	}
 }

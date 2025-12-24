@@ -11,14 +11,27 @@ CREATE TABLE users (
     zipcode INT NOT NULL
 );
 
-INSERT INTO users (firstName, lastName, email, city, address, zipcode)
-VALUES
-("Andrew", "Ellis", "puriti275@gmail.com", "Memphis", "1375 Catherine Street", 38111);
+--INSERT INTO users (firstName, lastName, email, city, address, zipcode)
+--VALUES
+--("Andrew", "Ellis", "puriti275@gmail.com", "Memphis", "1375 Catherine Street", 38111);
+
 
 CREATE TABLE payments (
     paymentID INT PRIMARY KEY AUTO_INCREMENT,
-    purchaseDate DATE NOT NULL,
+    userID INT NOT NULL
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     price INT NOT NULL,
-    quantity INT NOT NULL
-    product VARCHAR(100) NOT NULL
+    quantity INT,
+    product VARCHAR(100),
+    donation BOOLEAN NOT NULL,
+    recurring BOOLEAN NOT NULL,
+    FOREIGN KEY (userID) REFERENCES users(userID)
 );
+
+CREATE TABLE order_items (
+    orderID INT PRIMARY KEY AUTO_INCREMENT,
+    stripeID VARCHAR(255) NOT NULL,
+    product VARCHAR(100) NOT NULL,
+    quantity INT NOT NULL,
+    unit_price int NOT NULL
+)

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="TOF-Website.css">
+        <script src = "soul.js" defer></script>
+    </head>
+
+    <body>
+        <navbar class="nav">
+            <div class="nav-container nav-link">
+                <a href = "support.html">
+                    <button class = "nav-donate nav-link">SUPPORT</button>
+                </a>
+                <a href = "index.html">
+                    <button class = "nav-link">JOIN THE TEAM</button>
+                </a>
+                <a href="index.html">
+                    <button class = "nav-link">ABOUT US</button>
+                </a>
+                <a href="index.html">
+                    <button class = "nav-link">PROGRAMS</button>
+                </a>
+                <a href="index.html">
+                    <button class = "nav-link">RESOURCES</button>
+                </a>
+                <a href="index.html">
+                    <button class = "nav-link">SOCIAL MEDIA</button>
+                </a>
+                <a href="index.html">
+                    <button class = "nav-link">CONTACT</button>
+                </a>
+            </div>
+        </navbar>
+
+        <main>
+            <h1 class = "merch-title">Support TOF in Style</h1>
+            <div class = "border"></div>
+            <div class = "merch-cart-button-container">
+                <button class = "merch-cart-open" id = "view-cart" onclick="cartOpen()">
+                    View Cart | 0 Items | $0
+                </button>
+            </div>
+
+            <div class = "merch-cart-view" id = "merch-cart">
+                <p class = "merch-cart-item" id = "TOF-Hoodie">TOF Hoodie</p>
+
+                <div class = "merch-cart-size-selection">
+                    <div>
+                        <label for = "small">Small</label>
+                        <input type = "radio" name = "hoodie-size" id = "hoodie-small-cart" value = "small" checked>
+                    </div>
+                    <div>
+                        <label for = "small">Medium</label>
+                        <input type = "radio" name = "hoodie-size" id = "hoodie-medium-cart" value = "medium">
+                    </div>
+                    <div>
+                        <label for = "small">Large</label>
+                        <input type = "radio" name = "hoodie-size" id = "hoodie-large-cart" value = "large">
+                    </div>
+                </div>
+
+                <button class = "merch-cart-qty-change" onclick="addHoodieToCart()">Add 1</button>
+                <button class = "merch-cart-qty-change" onclick="removeHoodieFromCart()">Remove 1</button>
+                <p class = "merch-cart-qty-block" id = "hoodie">Quantity: 0</p>
+                <p class = "merch-cart-item" id = "TOF-Sweatshirt">TOF Sweatshirt</p>
+
+                <div class = "merch-cart-size-selection">
+                    <div>
+                        <label for = "small">Small</label>
+                        <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-small-cart" value = "small" checked>
+                    </div>
+                    <div>
+                        <label for = "small">Medium</label>
+                        <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-medium-cart" value = "medium">
+                    </div>
+                    <div>
+                        <label for = "small">Large</label>
+                        <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-large-cart" value = "large">
+                    </div>
+                </div>
+
+                <button class = "merch-cart-qty-change" onclick="addSweatshirtToCart()">Add 1</button>
+                <button class = "merch-cart-qty-change" onclick="removeSweatshirtFromCart()">Remove 1</button>
+                <p class = "merch-cart-qty-block" id = "sweatshirt">Quantity: 0</p>
+                <div class = "merch-cart-button-container">
+                    <button class = "merch-cart-close" onclick="cartClose()">Close</button>
+                    <button class = "merch-cart-checkout" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+
+            <div class = "merch-item-container">
+                <div class = "merch-item-container-div">
+                    <div class = "merch-item-container-slider">
+                        <img id = "slide-hoodie-1" src = "/7.png"></img>
+                        <img id = "slide-hoodie-2" src = "/7.png"></img>
+                        <img id = "slide-hoodie-3" src = "/7.png"></img>
+
+                        <div class = "merch-item-container-slider-nav">
+                            <a href = "#slide-hoodie-1"></a>
+                            <a href = "#slide-hoodie-2"></a>
+                            <a href = "#slide-hoodie-3"></a>
+                        </div>
+                    </div>
+                    <p class = "merch-item-container-description">TOF Hoodie</p>
+                    <p class = "merch-item-description">Adult Hoodie</p>
+                    <p>$65</p>
+
+                    <div class = "merch-item-size-selection">
+                        <div>
+                            <label for = "small">S</label>
+                            <input type = "radio" name = "hoodie-size" id = "hoodie-small" value = "small" checked>
+                        </div>
+                        <div>
+                            <label for = "medium">M</label>
+                            <input type = "radio" name = "hoodie-size" id = "hoodie-medium" value = "medium">
+                        </div>
+                        <div>
+                            <label for = "large">L</label>
+                            <input type = "radio" name = "hoodie-size" id = "hoodie-large" value = "large">
+                        </div>
+                    </div>
+                    <button onclick="addHoodieToCart()">Add to Cart</button>
+                    <audio id = "pop"><source src = "/Sounds/pop-402324.mp3"></audio>
+                    <audio id = "add"><source src = "/Sounds/new-notification-3-398649.mp3"></audio>
+                    
+                    
+                </div>
+                <div class = "merch-item-container-div">
+                    <div class = "merch-item-container-slider">
+                        <img id = "slide-sweatshirt-1" src = "/4.png"></img>
+                        <img id = "slide-sweatshirt-2" src = "/4.png"></img>
+                        <img id = "slide-sweatshirt-3" src = "/4.png"></img>
+                        
+                        <div class = "merch-item-container-slider-nav">
+                            <a href = "#slide-sweatshirt-1"></a>
+                            <a href = "#slide-sweatshirt-2"></a>
+                            <a href = "#slide-sweatshirt-3"></a>
+                        </div>
+                    </div>
+                    <p class = "merch-item-container-description">TOF Sweatshirt</p>
+                    <p class = "merch-item-description">Adult Sweatshirt</p>
+                    <p>$55</p>
+
+                    <div class = "merch-item-size-selection">
+                        <div>
+                            <label for = "small">S</label>
+                            <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-small" value = "small" checked>
+                        </div>
+                        <div>
+                            <label for = "medium">M</label>
+                            <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-medium" value = "medium">
+                        </div>
+                        <div>
+                            <label for = "large">L</label>
+                            <input type = "radio" name = "sweatshirt-size" id = "sweatshirt-large" value = "large">
+                        </div>
+                    </div>
+                    <button onclick = "addSweatshirtToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <p>
+            The Technology Outreach Foundation is a nonprofit with 501(c)(3) status, 
+            and all donations are tax-deductible by law (EIN: 99-4688023).
+        </p>
+        <p>
+            Based in Memphis, Tennessee. Physical programming expanding to Knoxville and other areas soon.
+        </p>
+        <div class = "footer-logo-container"><img class = "footer-logo" src = "/TOF Logo v2 Transparent.png"></img></div>
+    </footer>
+</html>
