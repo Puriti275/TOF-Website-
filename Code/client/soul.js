@@ -61,20 +61,6 @@ function addHoodieToCart() {
         document.getElementById("TOF-Hoodie").innerHTML = "TOF Hoodie: " + "$" + hoodiePrice;
         add.play()
     }
-
-
-    //document.getElementById("hoodie").innerHTML = "Quantity: " + hoodieQuantity + ", $65 each";
-    
-    /*
-    if(sweatshirtQuantity + hoodieQuantity === 1) {
-        document.getElementById("view-cart").innerHTML = "View Cart | " + (hoodieQuantity + sweatshirtQuantity) + " Item | $" + price;
-    }
-    else {
-        document.getElementById("view-cart").innerHTML = "View Cart | " + (hoodieQuantity + sweatshirtQuantity) + " Items | $" + price;
-    }
-    document.getElementById("view-cart").innerHTML = "View Cart | " + (hoodieQuantity + sweatshirtQuantity) + " Items | $" + price;
-    document.getElementById("TOF-Hoodie").innerHTML = "TOF Hoodie: " + "$" + hoodiePrice;
-    */
 }
 
 function addSweatshirtToCart() {
@@ -139,28 +125,6 @@ function removeHoodieFromCart() {
         document.getElementById("TOF-Hoodie").innerHTML = "TOF Hoodie: " + "$" + hoodiePrice;
         pop.play()
     }
-
-    /*
-    if(hoodieQuantity == 0) {
-        document.getElementById("hoodie").innerHTML = "Quantity: " + hoodieQuantity;
-    }
-    else if(hoodieQuantity + sweatshirtQuantity === 2) {
-        hoodieQuantity -= 1;
-        price -= 65;
-        hoodiePrice -= 65;
-        document.getElementById("hoodie").innerHTML = "Quantity: " + hoodieQuantity + ", $65 each";
-        document.getElementById("view-cart").innerHTML = "View Cart | " + (hoodieQuantity + sweatshirtQuantity) + " Item | $" + price;
-        document.getElementById("TOF-Hoodie").innerHTML = "TOF Hoodie: " + "$" + hoodiePrice;
-    }
-    else {
-        hoodieQuantity -= 1;
-        price -= 65;
-        hoodiePrice -= 65;
-        document.getElementById("hoodie").innerHTML = "Quantity: " + hoodieQuantity + ", $65 each";
-        document.getElementById("view-cart").innerHTML = "View Cart | " + (hoodieQuantity + sweatshirtQuantity) + " Items | $" + price;
-        document.getElementById("TOF-Hoodie").innerHTML = "TOF Hoodie: " + "$" + hoodiePrice;
-    }
-    */
 }
 
 function removeSweatshirtFromCart() {
@@ -225,12 +189,6 @@ function checkout() {
         if (res.ok) return res.json()
         else return res.json().then(json => Promise.reject(json))
     })
-    /*.then(res => {
-        items: Object.entries(cart).map(([id, quantity]) => {
-            id: Number(id),
-            quantity
-        })
-    })*/
     .then(({ url }) => {
         window.location = url
     })
